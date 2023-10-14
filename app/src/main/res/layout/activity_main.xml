@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#E7E7E7">
+
+    <TextView
+        android:id="@+id/tituloLaboratorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="10dp"
+        android:text="Incidentes"
+        android:textSize="25dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tituloLaboratorio"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tituloNombrePersona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/nombrePersona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escriba su nombre aquí"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/tituloRut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUT:"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/rut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escriba su RUT aquí"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/tituloIncidente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incidente:"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/incidente"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:hint="Descripción del incidente" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinner_options"
+        android:layout_marginBottom="-40dp"
+        android:textSize="16sp"
+        android:text="Laboratorio:" />
+
+    <Spinner
+        android:id="@+id/spinner_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/laboratorios"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="55dp" />
+
+    <TextView
+        android:id="@+id/textHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="230dp"
+        android:text="Hora:"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/textFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textHora"
+        android:text="Fecha:"
+        android:layout_below="@+id/textHora"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        >
+
+        <Button
+            android:id="@+id/btnGrabarIncidente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grabar Incidente"
+            android:layout_marginRight="20px"/>
+
+        <Button
+            android:id="@+id/btnCerrarAplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar sin guardar" />
+    </LinearLayout>
+
+</RelativeLayout>
